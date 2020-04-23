@@ -1,0 +1,31 @@
+﻿<Window x:Class="ButtonClickSepratePannel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ButtonClickSepratePannel"
+        mc:Ignorable="d"
+        Title="Click to Open Panel" Height="450" Width="800">
+    <Grid>
+        <Border Width="150"
+		        Height="70"
+		        VerticalAlignment="Top"
+		        Background="Yellow"
+		          local:MouseClickElementBehaviour.HiddenUiElement="{Binding ElementName=Panel}">
+            <TextBlock HorizontalAlignment="Center"
+			           VerticalAlignment="Center"
+			           Text="Click Here to show Panel"
+			           TextAlignment="Center"
+			           TextWrapping="Wrap" />
+        </Border>
+
+        <StackPanel Name="Panel" Height="100" Width="400"
+		            HorizontalAlignment="Center"
+		            VerticalAlignment="Center" Background="Red"
+		            Orientation="Vertical" Margin="2">
+            <TextBlock Width="100"
+			         Text="Welcome To PerpelTalk" Margin="2" />
+
+        </StackPanel>
+    </Grid>
+</Window>
